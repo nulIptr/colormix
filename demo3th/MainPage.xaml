@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="demo3th.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:demo3th"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Name="g" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="button" Grid.Row="1" Content="GO"  HorizontalAlignment="Center" VerticalAlignment="Center" Click="button_Click" UseSystemFocusVisuals="True" FontFamily="Segoe UI Black" FontSize="32"/>
+
+        <Image x:Name="image" HorizontalAlignment="Center"  VerticalAlignment="Center" Source="Assets/256.png"  Stretch="None" />
+    </Grid>
+</Page>
