@@ -2,22 +2,12 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.System.Threading;
 using Windows.UI;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 // “空白页”项模板在 http://go.microsoft.com/fwlink/?LinkId=234238 上提供
 
@@ -44,7 +34,7 @@ namespace demo3th
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
             if (cl.ColorOfLeftButton == cl.getCorrectColor())
             {
@@ -55,11 +45,11 @@ namespace demo3th
             else
             {
                 cl.timerOff();
-                cl.CallGameLostContentDiagAsync();
+                await cl.CallGameLostContentDiagAsync();
             }
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private async void Button_Click_1(object sender, RoutedEventArgs e)
         {
             if (cl.ColorOfMiddleButton == cl.getCorrectColor())
             {
@@ -70,11 +60,11 @@ namespace demo3th
             else
             {
                 cl.timerOff();
-                cl.CallGameLostContentDiagAsync();
+                await cl.CallGameLostContentDiagAsync();
             }
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private async void Button_Click_2(object sender, RoutedEventArgs e)
         {
             if (cl.ColorOfRightButton == cl.getCorrectColor())
             {
@@ -85,7 +75,7 @@ namespace demo3th
             else
             {
                 cl.timerOff();
-                cl.CallGameLostContentDiagAsync();
+                await cl.CallGameLostContentDiagAsync();
             }
         }
 
@@ -321,7 +311,7 @@ namespace demo3th
             currentMaxValueOfProgressBar = Tools.MAXTIME;
             currentValueOfProgressBar = currentMaxValueOfProgressBar;
             visiblityOfReplayButton = Visibility.Collapsed;
-            ColorList = new List<Color> {Colors.Black,
+            ColorList = new List<Windows.UI.Color> {Colors.Black,
                 Colors.Blue,Colors.Brown,Colors.Gold,Colors.Gray,
                 Colors.Green,Colors.Orange,Colors.Pink,Colors.Purple,
                 Colors.Red,Colors.White,Colors.Yellow };

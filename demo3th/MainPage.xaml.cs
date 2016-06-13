@@ -32,6 +32,10 @@ namespace demo3th
         private void button_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(corelogic));
+            var m = new MyClass();
+            m.init();
+            m.read();
+
         }
 
     }

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="6b17456c-bf6e-41a4-b120-6b812d38f863" Publisher="CN=fortu" Version="1.0.0.0" />
+  <Identity Name="36129nulIptr.Camdown" Publisher="CN=9083A188-1123-4667-9A20-70FAEBD5F1F3" Version="1.1.0.0" />
   <mp:PhoneIdentity PhoneProductId="6b17456c-bf6e-41a4-b120-6b812d38f863" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>CalmDown</DisplayName>
+    <DisplayName>Ca!mdown</DisplayName>
     <PublisherDisplayName>nulIptr</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
