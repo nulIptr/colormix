@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="36129nulIptr.Camdown" Publisher="CN=9083A188-1123-4667-9A20-70FAEBD5F1F3" Version="1.1.0.0" />
+  <Identity Name="36129nulIptr.Camdown" Publisher="CN=9083A188-1123-4667-9A20-70FAEBD5F1F3" Version="1.1.9.0" />
   <mp:PhoneIdentity PhoneProductId="6b17456c-bf6e-41a4-b120-6b812d38f863" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Ca!mdown</DisplayName>
@@ -17,6 +17,9 @@
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="CalmDown.App">
       <uap:VisualElements DisplayName="Ca!mDown" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Ca!mDown,OTHERWISE..." BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\Square71x71Logo.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+          </uap:ShowNameOnTiles>
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
         <uap:InitialRotationPreference>
@@ -27,5 +30,6 @@
   </Applications>
   <Capabilities>
     <Capability Name="internetClient" />
+    <Capability Name="internetClientServer" />
   </Capabilities>
 </Package>
