@@ -14,10 +14,10 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <Grid Name="fst" Background="{x:Bind Path=cl.BackgroundColor, Mode=OneWay}" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+        <Grid Name="fst" Background="{x:Bind Path=cl.BackgroundColor.Key, Mode=OneWay}" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
         <TextBlock Text="{x:Bind Path=cl.CurrentMark, Mode=OneWay}" FontSize="26.667" HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontStyle="Italic" FontWeight="Bold" />
-        <TextBlock  Text="{x:Bind Path=cl.CurrentColorOfStringMeaning, Mode=OneWay }"  Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{x:Bind Path=cl.StringColor, Mode=OneWay}" FontFamily="Segoe UI Black" FontSize="24"/>
-        <Grid Name="ssd" Background="{x:Bind Path=cl.BackgroundColor, Mode=OneWay}" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <TextBlock  Text="{x:Bind Path=cl.CurrentColorOfStringMeaning.Value , Mode=OneWay }"  Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{x:Bind Path=cl.StringColor.Key, Mode=OneWay}" FontFamily="Segoe UI Black" FontSize="24"/>
+        <Grid Name="ssd" Background="{x:Bind Path=cl.BackgroundColor.Key, Mode=OneWay}" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <!--<Button Name="Replay"  Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="10" Content="Replay" Click="Replay_Click" Visibility="{x:Bind Path=cl.VisiblityOfReplayButton, Mode=OneWay}"/>-->
 
             <ProgressBar x:Name="progressBar1" Grid.Row="1" VerticalAlignment="Stretch" Value="{x:Bind Path=cl.CurrentValueOfProgressBar, Mode=OneWay}" Opacity="0.5" Maximum="{x:Bind Path=cl.CurrentMaxValueOfProgressBar, Mode=OneWay}" IsIndeterminate="False"/>
@@ -30,9 +30,9 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button Background="{x:Bind Path=cl.ColorOfLeftButton, Mode=OneWay}"  Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Button_Click" />
-            <Button Background="{x:Bind Path=cl.ColorOfMiddleButton, Mode=OneWay}"  Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Button_Click_1" />
-            <Button Background="{x:Bind Path=cl.ColorOfRightButton, Mode=OneWay}"  Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Button_Click_2" />
+            <Button Background="{x:Bind Path=cl.ColorOfLeftButton.Key, Mode=OneWay}"  Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Button_Click" />
+            <Button Background="{x:Bind Path=cl.ColorOfMiddleButton.Key, Mode=OneWay}"  Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Button_Click_1" />
+            <Button Background="{x:Bind Path=cl.ColorOfRightButton.Key, Mode=OneWay}"  Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Button_Click_2" />
         </Grid>
 
 

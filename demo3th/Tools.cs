@@ -1,18 +1,26 @@
 ﻿using System.Collections.Generic;
-using Windows.UI;
 
 namespace demo3th
 {
+    using ColorKeyValuePair = KeyValuePair<string, string>;
+
     static class Tools
     {
-        static public void copyTo(this List<Color> ListOfColors, List<string> dist)
+        static public bool EqualTo(this ColorKeyValuePair l, ColorKeyValuePair r)
         {
-            foreach (var item in ListOfColors)
+            if (r.Key == l.Key && r.Value == l.Value)
             {
-                dist.Add(item.ToString());
+                return true;
             }
+            else
+                return false;
         }
         static public readonly double MAXTIME = 5000;
-        static public readonly double INTERVALTIME = 10;
+        static public readonly double REFERSHINTERVAL = 10;
+
+        internal static double Decrease()
+        {
+            return 50;
+        }
     }
 }
