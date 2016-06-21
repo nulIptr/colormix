@@ -30,7 +30,7 @@ namespace demo3th
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            if ( cl.ColorOfLeftButton.EqualTo(cl.getCorrectColor()))
+            if ( cl.ColorOfLeftButton.Equals(cl.getCorrectColor()))
             {
                 cl.CurrentMark++;
                 cl.timerOff();
@@ -45,7 +45,7 @@ namespace demo3th
 
         private async void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            if (cl.ColorOfMiddleButton.EqualTo(cl.getCorrectColor()))
+            if (cl.ColorOfMiddleButton.Equals(cl.getCorrectColor()))
             {
                 cl.CurrentMark++;
                 cl.timerOff();
@@ -60,7 +60,7 @@ namespace demo3th
 
         private async void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            if (cl.ColorOfRightButton.EqualTo(cl.getCorrectColor()))
+            if (cl.ColorOfRightButton.Equals(cl.getCorrectColor()))
             {
                 cl.CurrentMark++;
                 cl.timerOff();
@@ -76,7 +76,6 @@ namespace demo3th
         private void Replay_Click(object sender, RoutedEventArgs e)
         {
             cl.CurrentMark = 0;
-            //   mpvm.VisiblityOfReplayButton = Visibility.Collapsed;
             cl.r = new Random(DateTime.Now.Day * DateTime.Now.Hour * DateTime.Now.Minute * DateTime.Now.Second);
             cl.next();
         }
